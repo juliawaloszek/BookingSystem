@@ -5,7 +5,7 @@ namespace BookingSystem.BuisnessLogic.Entities
 {
     public class Customer : BaseEntity
     {
-        //imie
+
         [StringLength(60, MinimumLength = 3)]
         [Display(Name ="Imie klienta" )]
         public string FirstName { get; set; }
