@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-BookingSystem.Web-BC03B02A-C34E-4242-980C-2C72A6EE1B24</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookingSystem.BuisnessLogic\BookingSystem.BuisnessLogic.csproj" />
+    <ProjectReference Include="..\BookingSystem.Infrastructure\BookingSystem.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
