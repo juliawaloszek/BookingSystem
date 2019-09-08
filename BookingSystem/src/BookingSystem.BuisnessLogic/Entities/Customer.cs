@@ -5,12 +5,12 @@ namespace BookingSystem.BuisnessLogic.Entities
 {
     public class Customer : BaseEntity
     {
-
+        [Required(ErrorMessage = "Pole imie jest wymagane")]
         [StringLength(60, MinimumLength = 3)]
-        [Display(Name ="Imie klienta" )]
+        [Display(Name ="Imie" )]
         public string FirstName { get; set; }
 
-
+        [Required(ErrorMessage = "Pole nazwisko jest wymagane")]
         [StringLength(60, MinimumLength = 3)]
         [Display(Name ="Nazwisko klienta" )]
         public string LastName { get; set; }
