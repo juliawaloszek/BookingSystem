@@ -40,7 +40,10 @@ namespace BookingSystem.Infrastructure.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=BuisnessLogic.db");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite("Data Source=BuisnessLogic.db");
+            }         
         }
 
 
