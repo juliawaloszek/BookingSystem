@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using BookingSystem.Infrastructure.Data;
-using BookingSystem.Infrastructure.Data.Specifiactions;
 using Microsoft.EntityFrameworkCore;
 using UnitTests.Builders;
 using Xunit;
@@ -11,20 +10,17 @@ using Xunit.Abstractions;
 
 namespace IntegrationTests.Repositories.AppointmentRepositoryTests
 {
-    public class GetById
+    public class GetByIdOnRealDB
     {
         private readonly BookingSystemContext _context;
         private readonly AppointmentRepository _appointmentRepository;
         private AppointmentBuilder AppointmentBuilder { get; } = new AppointmentBuilder();
 
         private readonly ITestOutputHelper _output;
-        public GetById(ITestOutputHelper output)
+        public GetByIdOnRealDB(ITestOutputHelper output)
         {
             _output = output;
-            var dbOptions = new DbContextOptionsBuilder<BookingSystemContext>()
-                .UseInMemoryDatabase(databaseName: "TestCatalog")
-                .Options;
-            _context = new BookingSystemContext(dbOptions);
+            _context = new BookingSystemContext();
             _appointmentRepository = new AppointmentRepository(_context);
         }
 
@@ -40,15 +36,6 @@ namespace IntegrationTests.Repositories.AppointmentRepositoryTests
             var appointmentFromRepo = await _appointmentRepository.GetByIdAsync(appointmentId);
             Assert.Equal(AppointmentBuilder.TestCustomer.Id, appointmentFromRepo.CustomerId);
             Assert.Equal(AppointmentBuilder.TestEmployee.Id, appointmentFromRepo.EmployeeId);
-
-        }
-
-        [Fact]
-        public async Task TTTTT()
-        {
-
-            var krysiaAppointments = await _appointmentRepository.ListAsync(new CustomerAppointments(1));
-
 
         }
 
