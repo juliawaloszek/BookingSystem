@@ -14,7 +14,8 @@ namespace BookingSystem.BuisnessLogic.Entities
         [Display(Name ="Nazwisko pracownika" )]
         public string LastName { get; set; }
 
-
+        public int SalonId { get; set; }
+        public Salon Salon { get; set; }
 
         [Required(ErrorMessage = "Pole numer telefonu jest wymagane")]
         [Display(Name ="Numer telefonu" )]

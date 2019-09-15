@@ -33,8 +33,8 @@ namespace BookingSystem.BuisnessLogic.Entities
         [Required]
         public AppointmentStatus AppointmentStatus { get; set; }
 
-        // [Required]
-        // public int AppointmentTypeId { get; set; }
+        [Required]
+        public int AppointmentTypeId { get; set; }
         [Required]
         public AppointmentType AppointmentType { get; set; }
 
