@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using NodaTime;
 
 namespace BookingSystem.BuisnessLogic.Entities
 {
@@ -13,13 +14,13 @@ namespace BookingSystem.BuisnessLogic.Entities
         /// <summary>
         /// Godzina otwarcia
         /// </summary>
-        [DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
-        public DateTime StartHour { get; set; }
+        // [DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
+        public LocalTime StartHour { get; set; }
 
         /// <summary>
         /// Godzina zamknieca
         /// </summary>
-        [DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
-        public DateTime CloseHour { get; set; }
+        // [DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
+        public LocalTime CloseHour { get; set; }
     }
 }

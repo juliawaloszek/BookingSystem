@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using NodaTime;
 
 namespace BookingSystem.BuisnessLogic.Entities
 {
@@ -12,7 +13,7 @@ namespace BookingSystem.BuisnessLogic.Entities
 
 
         [Display(Name ="Czas trwania usługi" )]
-        public int Duration { get; set; }
+        public Duration Duration { get; set; }
 
         public virtual ICollection<Appointment> Appointments { get; set; }
     }

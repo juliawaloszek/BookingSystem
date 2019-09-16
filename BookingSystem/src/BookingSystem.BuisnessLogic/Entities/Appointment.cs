@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using BookingSystem.BuisnessLogic.Entities.Enums;
 using BookingSystem.BuisnessLogic.Validations;
+using NodaTime;
 
 namespace BookingSystem.BuisnessLogic.Entities
 {
@@ -19,14 +20,14 @@ namespace BookingSystem.BuisnessLogic.Entities
         [Display(Name = "Początek wizyty")]
         [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Time)]
-        public DateTime StartTime { get; set; }
+        public LocalTime StartTime { get; set; }
 
 
         [Required]
         [Display(Name = "Koniec wizyty")]
         [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Time)]
-        public DateTime EndTime { get; set; }
+        public LocalTime EndTime { get; set; }
 
         public string Description { get; set; }
 
