@@ -11,8 +11,8 @@ namespace UnitTests.Builders
     {
         private Appointment _appointment;
         public DateTime TestDate => DateTime.Today;
-        public LocalTime  TestStartTime => new LocalTime(8, 30, 0);
-        public LocalTime  TestEndTime => new LocalTime( 9, 0, 0);
+        public string  TestStartTime => "8:30";
+        public string  TestEndTime => "9:00";
         public AppointmentStatus TestAppointmentStatus => AppointmentStatus.Came;
         public AppointmentType TestAppointmentType => new AppointmentType
         {

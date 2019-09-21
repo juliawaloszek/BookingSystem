@@ -25,13 +25,13 @@ namespace BookingSystem.Infrastructure.Data.Configurations
                     AddressApartmentNumber = 2,
                     PhoneNumber = "32 238 21 93",
                     WorkingHours = new List<WorkingHour> {
-                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(13,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)}
+                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = "8:00", CloseHour = "13:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = "0", CloseHour = "0"}
                     }
                 },
                 new Salon {
@@ -43,13 +43,13 @@ namespace BookingSystem.Infrastructure.Data.Configurations
                     AddressApartmentNumber = 23,
                     PhoneNumber = "500500500",
                     WorkingHours = new List<WorkingHour> {
-                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = new LocalTime(10,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = new LocalTime(10,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = new LocalTime(10,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = new LocalTime(10,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = new LocalTime(10,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = new LocalTime(12,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = new LocalTime(12,00,00), CloseHour = new LocalTime(0,18,00)}
+                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = "10:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = "10:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = "10:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = "10:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = "10:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = "12:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = "12:00", CloseHour = "18:00"}
                     }
                 },
                 new Salon {
@@ -60,13 +60,13 @@ namespace BookingSystem.Infrastructure.Data.Configurations
                     AddressBuildingNumber = 3,
                     PhoneNumber = "589101189",
                     WorkingHours = new List<WorkingHour> {
-                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)}
+                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = "0", CloseHour = "0"}
                     }
                 },
                 new Salon {
@@ -77,13 +77,13 @@ namespace BookingSystem.Infrastructure.Data.Configurations
                     AddressBuildingNumber = 155,
                     PhoneNumber = "364918344",
                     WorkingHours = new List<WorkingHour> {
-                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(18,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = new LocalTime(8,00,00), CloseHour = new LocalTime(13,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)}
+                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = "8:00", CloseHour = "18:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = "8:00", CloseHour = "13:00"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = "0", CloseHour = "0"}
                     }
                 },
                 new Salon {
@@ -94,13 +94,13 @@ namespace BookingSystem.Infrastructure.Data.Configurations
                     AddressApartmentNumber = 22,
                     PhoneNumber = "500000000",
                     WorkingHours = new List<WorkingHour> {
-                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)},
-                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = new LocalTime(0,00,00), CloseHour = new LocalTime(0,00,00)}
+                        new WorkingHour { DayOfWeek = DayOfWeek.Monday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Tuesday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Wednesday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Thursday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Friday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Saturday, OpenHour = "0", CloseHour = "0"},
+                        new WorkingHour { DayOfWeek = DayOfWeek.Sunday, OpenHour = "0", CloseHour = "0"}
                     }
                 }                                                                
             );
