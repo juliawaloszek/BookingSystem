@@ -7,6 +7,7 @@ namespace BookingSystem.BuisnessLogic.Entities
     {
         public string Name { get; set; }
         public string FullName { get; set; }
+        public string AddressCity { get; set; }
         public string AddressStreet { get; set; }
         public int AddressBuildingNumber { get; set; }
         public int AddressApartmentNumber { get; set; }
@@ -32,7 +33,7 @@ namespace BookingSystem.BuisnessLogic.Entities
 
 
 
-        
+
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

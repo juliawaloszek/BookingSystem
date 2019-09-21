@@ -6,6 +6,7 @@ using BookingSystem.BuisnessLogic.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using BookingSystem.BuisnessLogic.Entities.Enums;
+using BookingSystem.Infrastructure.Data.Configurations;
 
 namespace BookingSystem.Infrastructure.Data
 {
@@ -71,6 +72,9 @@ namespace BookingSystem.Infrastructure.Data
             builder.Entity<Appointment>()
                 .Property(x => x.AppointmentStatus)
                    .HasConversion(new EnumToNumberConverter<AppointmentStatus, int>());
+
+            builder.ApplyConfiguration(new SalonConfiguration());
+            // builder.ApplyConfiguration(new EmployeeConfiguration());
         }
 
 

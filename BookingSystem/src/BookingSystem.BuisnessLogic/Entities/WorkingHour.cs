@@ -7,7 +7,7 @@ namespace BookingSystem.BuisnessLogic.Entities
     public class WorkingHour : BaseEntity
     {
         public DayOfWeek DayOfWeek { get; set; }
-        public LocalTime StartHour { get; set; }
+        public LocalTime OpenHour { get; set; }
         public LocalTime CloseHour { get; set; }
 
 
