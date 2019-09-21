@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using BookingSystem.BuisnessLogic.Entities.Enums;
 using BookingSystem.Infrastructure.Data.Configurations;
+using NodaTime;
 
 namespace BookingSystem.Infrastructure.Data
 {
@@ -50,6 +51,11 @@ namespace BookingSystem.Infrastructure.Data
 
         protected override void OnModelCreating (ModelBuilder builder)
         {
+        base.OnModelCreating(builder);
+        var localDateConverter = 
+            new ValueConverter<LocalDate, DateTime>(v =>  
+                v.ToDateTimeUnspecified(), 
+                v => LocalDate.FromDateTime(v));            
 
             builder.Entity<Appointment>()
                 .HasOne(x => x.Customer)
@@ -72,6 +78,23 @@ namespace BookingSystem.Infrastructure.Data
             builder.Entity<Appointment>()
                 .Property(x => x.AppointmentStatus)
                    .HasConversion(new EnumToNumberConverter<AppointmentStatus, int>());
+
+            builder.Entity<Appointment>()
+                .Property(e => e.StartTime)
+                .HasConversion(localDateConverter);
+
+            builder.Entity<Appointment>()
+                .Property(e => e.EndTime)
+                .HasConversion(localDateConverter);
+
+            builder.Entity<WorkingHour>()
+                .Property(e => e.OpenHour)
+                .HasConversion(localDateConverter);
+
+            builder.Entity<WorkingHour>()
+                .Property(e => e.CloseHour)
+                .HasConversion(localDateConverter);
+                
 
             builder.ApplyConfiguration(new SalonConfiguration());
             // builder.ApplyConfiguration(new EmployeeConfiguration());
