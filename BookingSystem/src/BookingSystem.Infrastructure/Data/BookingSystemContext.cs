@@ -63,7 +63,10 @@ namespace BookingSystem.Infrastructure.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Appointment>()
-                .HasOne(x => x.AppointmentType);
+                .HasOne(x => x.AppointmentType)
+                .WithMany(x => x.Appointments)
+                .HasForeignKey(x => x.AppointmentTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Appointment>()
                 .Property(x => x.AppointmentStatus)
