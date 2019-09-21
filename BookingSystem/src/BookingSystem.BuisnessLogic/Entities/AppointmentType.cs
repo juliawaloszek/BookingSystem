@@ -13,7 +13,8 @@ namespace BookingSystem.BuisnessLogic.Entities
 
 
         [Display(Name ="Czas trwania usługi" )]
-        public Duration Duration { get; set; }
+        // public Duration Duration { get; set; }
+        public int Duration { get; set; }
 
         public virtual ICollection<Appointment> Appointments { get; set; }
     }

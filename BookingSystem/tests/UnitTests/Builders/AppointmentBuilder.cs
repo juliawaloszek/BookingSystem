@@ -1,5 +1,6 @@
 ﻿using BookingSystem.BuisnessLogic.Entities;
 using BookingSystem.BuisnessLogic.Entities.Enums;
+using NodaTime;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,14 +11,16 @@ namespace UnitTests.Builders
     {
         private Appointment _appointment;
         public DateTime TestDate => DateTime.Today;
-        public DateTime TestStartTime => new DateTime(2019, 1, 1, 8, 30, 5);
-        public DateTime TestEndTime => new DateTime(2019, 1, 1, 9, 30, 5);
+        // public DateTime TestStartTime => new DateTime(2019, 1, 1, 8, 30, 5);
+        public LocalTime  TestStartTime => new LocalTime(8, 30, 0);
+        public LocalTime  TestEndTime => new LocalTime( 9, 0, 0);
         public AppointmentStatus TestAppointmentStatus => AppointmentStatus.Came;
         public AppointmentType TestAppointmentType => new AppointmentType
         {
             Id = 1,
             Name = "TestName",
-            Duration=60
+            // Duration=Duration.Minutes
+            Duration = 30
         };
         // public int TestCustomerId => 1;
         public Customer TestCustomer => new Customer
